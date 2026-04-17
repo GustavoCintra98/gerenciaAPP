@@ -48,7 +48,7 @@ namespace GerenciaAPP
                         cmd.Parameters.AddWithValue("@sku", txtSKU.Text);
                         cmd.Parameters.AddWithValue("@ean", txtEAN.Text);
                         cmd.Parameters.AddWithValue("@descricao", txtDescricao.Text);
-                        cmd.Parameters.AddWithValue("@categoria", cmbCategoria.Text);
+                        cmd.Parameters.AddWithValue("@categoria", cmbCategoria.SelectedValue);
                         cmd.Parameters.AddWithValue("@unidade", txtUnidade.Text);
                         cmd.Parameters.AddWithValue("@prccompra", numUpPrecoCompra.Value);
                         cmd.Parameters.AddWithValue("@prcvenda", numUpPrecoVenda.Value);
@@ -97,7 +97,8 @@ namespace GerenciaAPP
                         txtSKU.Clear();
                         txtEAN.Clear();
                         txtDescricao.Clear();
-                        cmbCategoria.Items.Clear();
+                        //cmbCategoria.Items.Clear();
+                        cmbCategoria.SelectedIndex = -1;
                         txtUnidade.Clear();
                         numUpPrecoCompra.Value = 0;
                         numUpPrecoVenda.Value = 0;
@@ -113,6 +114,7 @@ namespace GerenciaAPP
                         txtMarca.Clear();
                         dtpDataValidade.Value = DateTime.Today;
                         txtDescricaoDetalhada.Clear();
+                        lblRazaoSocial.Text = string.Empty;
                     }
                 }
             }
@@ -201,12 +203,15 @@ namespace GerenciaAPP
                     
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
-                        cmbCategoria.Items.Clear();
 
-                        while (dr.Read())
-                        {
-                            cmbCategoria.Items.Add(dr["nome_categoria"].ToString());
-                        }
+                        DataTable dt = new DataTable();
+
+                        dt.Load(dr);
+                        cmbCategoria.DataSource = dt;
+                        cmbCategoria.DisplayMember = "nome_categoria";
+                        cmbCategoria.ValueMember = "id_categoria";
+
+
                     }
                 }
             }
