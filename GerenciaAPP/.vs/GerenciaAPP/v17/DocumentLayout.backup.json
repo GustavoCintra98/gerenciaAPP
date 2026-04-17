@@ -1,0 +1,421 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmcadprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmcadprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmconsultarfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmcadprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmcadprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmconsultarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmconsultarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmconsultarfornecedorprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarfornecedorprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmconsultarfornecedorprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarfornecedorprodutos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmconsultarfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmcadfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmcadfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmconsultarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmconsultarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\gerenciaapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\gerenciaapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmconsultarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmconsultarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmconsultarcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmcadclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmcadclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\frmcadclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmcadclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmcadcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmcadcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmcadfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmcadfornecedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\gerenciaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|c:\\users\\mateus.rsilva27\\documents\\gerenciaapp\\gerenciaapp\\gerenciaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{947E1E22-D68C-4C6D-9DA7-130D08B3B751}|GerenciaAPP\\GerenciaAPP.csproj|solutionrelative:gerenciaapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmConsultarProdutos.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarProdutos.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarProdutos.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarProdutos.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarProdutos.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T00:25:40.891Z",
+              "IsPinned": true,
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmCadProdutos.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadProdutos.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmCadProdutos.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadProdutos.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmCadProdutos.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAQwNgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T01:08:50.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmConsultarFornecedores.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedores.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarFornecedores.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedores.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarFornecedores.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwFcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T22:49:23.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmConsultarProdutos.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarProdutos.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarProdutos.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarProdutos.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarProdutos.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T00:42:32.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmCadProdutos.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadProdutos.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmCadProdutos.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadProdutos.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmCadProdutos.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T22:36:31.231Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmConsultarFornecedorProdutos.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedorProdutos.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarFornecedorProdutos.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedorProdutos.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarFornecedorProdutos.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T22:32:27.848Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmConsultarFornecedorProdutos.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedorProdutos.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarFornecedorProdutos.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedorProdutos.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarFornecedorProdutos.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAuwGoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T23:07:52.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmConsultarFornecedores.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedores.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarFornecedores.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarFornecedores.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarFornecedores.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T00:56:31.501Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmPrincipal.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmPrincipal.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmPrincipal.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T22:28:20.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmPrincipal.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmPrincipal.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmPrincipal.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAvwEkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T00:09:37.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmCadFornecedores.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadFornecedores.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmCadFornecedores.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadFornecedores.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmCadFornecedores.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T22:59:45.725Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmConsultarClientes.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarClientes.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarClientes.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarClientes.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarClientes.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAlwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T00:34:49.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmConsultarClientes.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarClientes.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarClientes.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarClientes.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarClientes.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T00:16:17.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GerenciaAPP.csproj",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP.csproj",
+              "RelativeDocumentMoniker": "GerenciaAPP\\GerenciaAPP.csproj",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP.csproj",
+              "RelativeToolTip": "GerenciaAPP\\GerenciaAPP.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-18T23:19:13.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Conexao.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Conexao.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\Conexao.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Conexao.cs",
+              "RelativeToolTip": "GerenciaAPP\\Conexao.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-18T23:28:27.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmConsultarCategorias.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarCategorias.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarCategorias.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarCategorias.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarCategorias.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T22:18:40.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "frmConsultarCategorias.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarCategorias.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmConsultarCategorias.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmConsultarCategorias.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmConsultarCategorias.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAgwFQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T22:41:28.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmCadCategorias.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadCategorias.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmCadCategorias.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadCategorias.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmCadCategorias.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T22:54:14.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "frmCadClientes.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadClientes.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmCadClientes.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadClientes.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmCadClientes.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAgwDIAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T00:39:59.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmCadClientes.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadClientes.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmCadClientes.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadClientes.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\frmCadClientes.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T00:17:23.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "frmCadFornecedores.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadFornecedores.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmCadFornecedores.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmCadFornecedores.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmCadFornecedores.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAnwBYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T00:48:37.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "frmPrincipal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmPrincipal.Designer.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\frmPrincipal.Designer.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\frmPrincipal.Designer.cs",
+              "RelativeToolTip": "GerenciaAPP\\frmPrincipal.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-12T00:14:04.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Form1.Designer.cs",
+              "RelativeToolTip": "GerenciaAPP\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-07T00:12:50.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Form1.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\Form1.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Form1.cs [Projeto]",
+              "RelativeToolTip": "GerenciaAPP\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T00:36:11.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Form1.cs",
+              "RelativeDocumentMoniker": "GerenciaAPP\\Form1.cs",
+              "ToolTip": "C:\\Users\\mateus.rsilva27\\Documents\\GerenciaAPP\\GerenciaAPP\\GerenciaAPP\\Form1.cs",
+              "RelativeToolTip": "GerenciaAPP\\Form1.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-05T00:36:36.917Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
