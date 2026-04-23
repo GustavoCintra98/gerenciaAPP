@@ -92,5 +92,19 @@ namespace GerenciaAPP
         {
 
         }
+
+        private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // se o campo selecionado for diferente de "null", então a deleção pode acontecer
+                if (dgvProdutos.CurrentRow != null)
+                {
+                    int idProduto = Convert.ToInt32(dgvProdutos.CurrentRow.Cells["CÓDIGO"].Value);
+
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja deletar este produto? {dgvProdutos.CurrentRow.Cells["NOME PROTUDO"].Value} ?", "Confirmação de Deleção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                }
+            }
+        }
     }
 }

@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             grbInformacoesBusca = new GroupBox();
             lblBuscar = new Label();
             txtBuscarProdutos = new TextBox();
             dgvProdutos = new DataGridView();
+            ctxMenuProdutos = new ContextMenuStrip(components);
+            alterarToolStripMenuItem = new ToolStripMenuItem();
+            deletarToolStripMenuItem = new ToolStripMenuItem();
             grbInformacoesBusca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
+            ctxMenuProdutos.SuspendLayout();
             SuspendLayout();
             // 
             // grbInformacoesBusca
@@ -76,11 +81,31 @@
             dgvProdutos.TabIndex = 1;
             dgvProdutos.CellContentClick += dgvProdutos_CellContentClick;
             // 
+            // ctxMenuProdutos
+            // 
+            ctxMenuProdutos.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
+            ctxMenuProdutos.Name = "ctxMenuProdutos";
+            ctxMenuProdutos.Size = new Size(181, 70);
+            // 
+            // alterarToolStripMenuItem
+            // 
+            alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
+            alterarToolStripMenuItem.Size = new Size(180, 22);
+            alterarToolStripMenuItem.Text = "Alterar";
+            // 
+            // deletarToolStripMenuItem
+            // 
+            deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
+            deletarToolStripMenuItem.Size = new Size(180, 22);
+            deletarToolStripMenuItem.Text = "Deletar";
+            deletarToolStripMenuItem.Click += deletarToolStripMenuItem_Click;
+            // 
             // frmConsultarProdutos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(906, 638);
+            ContextMenuStrip = ctxMenuProdutos;
             Controls.Add(dgvProdutos);
             Controls.Add(grbInformacoesBusca);
             Name = "frmConsultarProdutos";
@@ -89,6 +114,7 @@
             grbInformacoesBusca.ResumeLayout(false);
             grbInformacoesBusca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).EndInit();
+            ctxMenuProdutos.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -98,5 +124,8 @@
         private Label lblBuscar;
         private TextBox txtBuscarProdutos;
         private DataGridView dgvProdutos;
+        private ContextMenuStrip ctxMenuProdutos;
+        private ToolStripMenuItem alterarToolStripMenuItem;
+        private ToolStripMenuItem deletarToolStripMenuItem;
     }
 }
