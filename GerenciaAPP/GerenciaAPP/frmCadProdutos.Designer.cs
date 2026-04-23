@@ -149,7 +149,7 @@
             chkDataValidade.Location = new Point(327, 171);
             chkDataValidade.Name = "chkDataValidade";
             chkDataValidade.Size = new Size(154, 19);
-            chkDataValidade.TabIndex = 45;
+            chkDataValidade.TabIndex = 17;
             chkDataValidade.Text = "Possui data de validade?";
             chkDataValidade.UseVisualStyleBackColor = true;
             chkDataValidade.CheckedChanged += chkDataValidade_CheckedChanged;
@@ -162,7 +162,7 @@
             numUpPrecoVenda.Maximum = new decimal(new int[] { 1316134912, 2328, 0, 0 });
             numUpPrecoVenda.Name = "numUpPrecoVenda";
             numUpPrecoVenda.Size = new Size(102, 23);
-            numUpPrecoVenda.TabIndex = 44;
+            numUpPrecoVenda.TabIndex = 6;
             // 
             // numUpPrecoCompra
             // 
@@ -172,7 +172,7 @@
             numUpPrecoCompra.Maximum = new decimal(new int[] { 1316134912, 2328, 0, 0 });
             numUpPrecoCompra.Name = "numUpPrecoCompra";
             numUpPrecoCompra.Size = new Size(100, 23);
-            numUpPrecoCompra.TabIndex = 43;
+            numUpPrecoCompra.TabIndex = 5;
             numUpPrecoCompra.ValueChanged += numUpPrecoCompra_ValueChanged;
             // 
             // pictureBox4
@@ -209,11 +209,12 @@
             // 
             // txtDescricaoDetalhada
             // 
+            txtDescricaoDetalhada.CharacterCasing = CharacterCasing.Upper;
             txtDescricaoDetalhada.Location = new Point(6, 217);
             txtDescricaoDetalhada.Multiline = true;
             txtDescricaoDetalhada.Name = "txtDescricaoDetalhada";
             txtDescricaoDetalhada.Size = new Size(942, 175);
-            txtDescricaoDetalhada.TabIndex = 38;
+            txtDescricaoDetalhada.TabIndex = 19;
             // 
             // lblDescricaoDetalhada
             // 
@@ -231,7 +232,7 @@
             dtpDataValidade.Location = new Point(481, 169);
             dtpDataValidade.Name = "dtpDataValidade";
             dtpDataValidade.Size = new Size(97, 23);
-            dtpDataValidade.TabIndex = 36;
+            dtpDataValidade.TabIndex = 18;
             dtpDataValidade.ValueChanged += dtpDataValidade_ValueChanged;
             // 
             // lblDataValidade
@@ -246,10 +247,11 @@
             // 
             // txtMarca
             // 
+            txtMarca.CharacterCasing = CharacterCasing.Upper;
             txtMarca.Location = new Point(213, 169);
             txtMarca.Name = "txtMarca";
             txtMarca.Size = new Size(108, 23);
-            txtMarca.TabIndex = 34;
+            txtMarca.TabIndex = 16;
             // 
             // lblMarca
             // 
@@ -268,7 +270,7 @@
             numUpEstoqueMaximo.Maximum = new decimal(new int[] { 999999, 0, 0, 196608 });
             numUpEstoqueMaximo.Name = "numUpEstoqueMaximo";
             numUpEstoqueMaximo.Size = new Size(97, 23);
-            numUpEstoqueMaximo.TabIndex = 32;
+            numUpEstoqueMaximo.TabIndex = 15;
             numUpEstoqueMaximo.ThousandsSeparator = true;
             // 
             // lblEstoqueMaximo
@@ -288,7 +290,7 @@
             numUpEstoqueMinimo.Maximum = new decimal(new int[] { 999999, 0, 0, 196608 });
             numUpEstoqueMinimo.Name = "numUpEstoqueMinimo";
             numUpEstoqueMinimo.Size = new Size(97, 23);
-            numUpEstoqueMinimo.TabIndex = 30;
+            numUpEstoqueMinimo.TabIndex = 14;
             numUpEstoqueMinimo.ThousandsSeparator = true;
             // 
             // lblEstoqueMinimo
@@ -315,7 +317,7 @@
             txtFornecedor.Name = "txtFornecedor";
             txtFornecedor.ReadOnly = true;
             txtFornecedor.Size = new Size(100, 23);
-            txtFornecedor.TabIndex = 27;
+            txtFornecedor.TabIndex = 13;
             txtFornecedor.TextChanged += txtFornecedor_TextChanged;
             txtFornecedor.DoubleClick += txtFornecedor_DoubleClick;
             txtFornecedor.Leave += txtFornecedor_Leave;
@@ -331,10 +333,11 @@
             // 
             // txtNCM
             // 
+            txtNCM.CharacterCasing = CharacterCasing.Upper;
             txtNCM.Location = new Point(6, 125);
             txtNCM.Name = "txtNCM";
             txtNCM.Size = new Size(138, 23);
-            txtNCM.TabIndex = 25;
+            txtNCM.TabIndex = 12;
             // 
             // lblNCM
             // 
@@ -353,7 +356,7 @@
             numUpProfundidade.Maximum = new decimal(new int[] { 999999, 0, 0, 196608 });
             numUpProfundidade.Name = "numUpProfundidade";
             numUpProfundidade.Size = new Size(80, 23);
-            numUpProfundidade.TabIndex = 23;
+            numUpProfundidade.TabIndex = 11;
             numUpProfundidade.ThousandsSeparator = true;
             // 
             // numUpLargura
@@ -364,7 +367,7 @@
             numUpLargura.Maximum = new decimal(new int[] { 999999, 0, 0, 196608 });
             numUpLargura.Name = "numUpLargura";
             numUpLargura.Size = new Size(80, 23);
-            numUpLargura.TabIndex = 22;
+            numUpLargura.TabIndex = 10;
             numUpLargura.ThousandsSeparator = true;
             // 
             // numUpComprimento
@@ -375,7 +378,7 @@
             numUpComprimento.Maximum = new decimal(new int[] { 999999, 0, 0, 196608 });
             numUpComprimento.Name = "numUpComprimento";
             numUpComprimento.Size = new Size(81, 23);
-            numUpComprimento.TabIndex = 21;
+            numUpComprimento.TabIndex = 9;
             numUpComprimento.Tag = "";
             numUpComprimento.ThousandsSeparator = true;
             // 
@@ -408,11 +411,13 @@
             // 
             // cmbComposicao
             // 
+            cmbComposicao.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbComposicao.FormattingEnabled = true;
+            cmbComposicao.Items.AddRange(new object[] { "ALIMENTÍCIOS", "MADEIRA", "METAL", "PAPEL", "PLÁSTICO", "TECIDO", "VIDRO", "OUTROS" });
             cmbComposicao.Location = new Point(461, 80);
             cmbComposicao.Name = "cmbComposicao";
             cmbComposicao.Size = new Size(100, 23);
-            cmbComposicao.TabIndex = 17;
+            cmbComposicao.TabIndex = 8;
             // 
             // lblComposicao
             // 
@@ -431,7 +436,7 @@
             numUpPeso.Maximum = new decimal(new int[] { 999999, 0, 0, 196608 });
             numUpPeso.Name = "numUpPeso";
             numUpPeso.Size = new Size(91, 23);
-            numUpPeso.TabIndex = 15;
+            numUpPeso.TabIndex = 7;
             // 
             // lblPeso
             // 
@@ -463,10 +468,11 @@
             // 
             // txtUnidade
             // 
+            txtUnidade.CharacterCasing = CharacterCasing.Upper;
             txtUnidade.Location = new Point(6, 81);
             txtUnidade.Name = "txtUnidade";
             txtUnidade.Size = new Size(138, 23);
-            txtUnidade.TabIndex = 9;
+            txtUnidade.TabIndex = 4;
             // 
             // lblUnidade
             // 
@@ -479,11 +485,12 @@
             // 
             // cmbCategoria
             // 
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FormattingEnabled = true;
             cmbCategoria.Location = new Point(785, 37);
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(163, 23);
-            cmbCategoria.TabIndex = 7;
+            cmbCategoria.TabIndex = 3;
             // 
             // lblCategoria
             // 
@@ -496,10 +503,11 @@
             // 
             // txtDescricao
             // 
+            txtDescricao.CharacterCasing = CharacterCasing.Upper;
             txtDescricao.Location = new Point(294, 37);
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(485, 23);
-            txtDescricao.TabIndex = 5;
+            txtDescricao.TabIndex = 2;
             // 
             // lblDescricao
             // 
@@ -512,10 +520,11 @@
             // 
             // txtEAN
             // 
+            txtEAN.CharacterCasing = CharacterCasing.Upper;
             txtEAN.Location = new Point(150, 37);
             txtEAN.Name = "txtEAN";
             txtEAN.Size = new Size(138, 23);
-            txtEAN.TabIndex = 3;
+            txtEAN.TabIndex = 1;
             // 
             // lblEAN
             // 
@@ -528,10 +537,11 @@
             // 
             // txtSKU
             // 
+            txtSKU.CharacterCasing = CharacterCasing.Upper;
             txtSKU.Location = new Point(6, 37);
             txtSKU.Name = "txtSKU";
             txtSKU.Size = new Size(138, 23);
-            txtSKU.TabIndex = 1;
+            txtSKU.TabIndex = 0;
             // 
             // lblSKU
             // 
@@ -539,7 +549,7 @@
             lblSKU.Location = new Point(6, 19);
             lblSKU.Name = "lblSKU";
             lblSKU.Size = new Size(31, 15);
-            lblSKU.TabIndex = 0;
+            lblSKU.TabIndex = 1;
             lblSKU.Text = "SKU:";
             // 
             // btnCadastrar
@@ -547,7 +557,7 @@
             btnCadastrar.Location = new Point(893, 569);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(75, 23);
-            btnCadastrar.TabIndex = 1;
+            btnCadastrar.TabIndex = 20;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click;

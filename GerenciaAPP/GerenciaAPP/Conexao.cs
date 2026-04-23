@@ -12,7 +12,7 @@ namespace GerenciaAPP
     {
 
         //String de conexão
-        private string stringConexao = @"Server=FRA0687835W11-1\SQLEXPRESS;
+        private string stringConexao = @"Server=FRA0687817W11-1\SQLEXPRESS;
         Database=db_gerenciaapp;User Id = sa;
         Password = 1234567890;TrustServerCertificate=True";
 

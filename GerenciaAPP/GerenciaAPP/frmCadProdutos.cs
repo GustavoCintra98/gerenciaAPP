@@ -91,7 +91,7 @@ namespace GerenciaAPP
 
                         cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Cliente cadastrado com sucesso!",
+                        MessageBox.Show("Produto cadastrado com sucesso!",
                             "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         txtSKU.Clear();
