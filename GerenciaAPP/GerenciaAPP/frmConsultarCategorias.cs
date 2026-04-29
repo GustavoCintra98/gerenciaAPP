@@ -58,7 +58,7 @@ namespace GerenciaAPP
         private void txtBuscarCategorias_TextChanged(object sender, EventArgs e)
         {
             try
-            {   
+            {
                 //Instanciando a conexão
                 Conexao conexao = new Conexao();
 
@@ -70,11 +70,11 @@ namespace GerenciaAPP
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
-                    {   
+                    {
                         //Se o usuário pesquisar por ca (Canecas,
                         //Canetas,Bonecas).
-                        cmd.Parameters.AddWithValue("@filtro", 
-                            "%" + txtBuscarCategorias.Text + 
+                        cmd.Parameters.AddWithValue("@filtro",
+                            "%" + txtBuscarCategorias.Text +
                             "%");
 
                         //Preencher o dataTable
@@ -90,6 +90,43 @@ namespace GerenciaAPP
             {
                 MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
             }
+        }
+
+        private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvCategorias.CurrentRow != null)
+                {
+                    int idCategoria = Convert.ToInt32(dgvCategorias.CurrentRow.Cells["CÓDIGO"].Value);
+
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja deletar esta categoria: {dgvCategorias.CurrentRow.Cells["NOME"].Value}?",
+                        "Confirmação de Deleção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        Conexao conexao = new Conexao();
+
+                        string sql = "DELETE FROM tblcategorias WHERE id_categoria = @id";
+
+                        using (SqlConnection con = conexao.Conectar())
+                        {
+                            using (SqlCommand cmd = new SqlCommand(sql, con))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idCategoria);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                        MessageBox.Show("Categoria deletada com sucesso!");
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao deletar a categoria: " + ex.Message);
+            }
+
         }
     }
 }

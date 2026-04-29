@@ -33,12 +33,12 @@
             txtBuscarCategorias = new TextBox();
             lblBuscar = new Label();
             dgvCategorias = new DataGridView();
-            ctxConsultarCategorias = new ContextMenuStrip(components);
-            editarToolStripMenuItem = new ToolStripMenuItem();
-            removerToolStripMenuItem = new ToolStripMenuItem();
+            ctxMenuCategorias = new ContextMenuStrip(components);
+            alterarToolStripMenuItem = new ToolStripMenuItem();
+            deletarToolStripMenuItem = new ToolStripMenuItem();
             grbInformacoesBusca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
-            ctxConsultarCategorias.SuspendLayout();
+            ctxMenuCategorias.SuspendLayout();
             SuspendLayout();
             // 
             // grbInformacoesBusca
@@ -75,30 +75,31 @@
             dgvCategorias.AllowUserToDeleteRows = false;
             dgvCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvCategorias.ContextMenuStrip = ctxConsultarCategorias;
+            dgvCategorias.ContextMenuStrip = ctxMenuCategorias;
             dgvCategorias.Location = new Point(12, 93);
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
             dgvCategorias.Size = new Size(546, 427);
             dgvCategorias.TabIndex = 1;
             // 
-            // ctxConsultarCategorias
+            // ctxMenuCategorias
             // 
-            ctxConsultarCategorias.Items.AddRange(new ToolStripItem[] { editarToolStripMenuItem, removerToolStripMenuItem });
-            ctxConsultarCategorias.Name = "ctxConsultarCategorias";
-            ctxConsultarCategorias.Size = new Size(122, 48);
+            ctxMenuCategorias.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
+            ctxMenuCategorias.Name = "ctxMenuCategorias";
+            ctxMenuCategorias.Size = new Size(181, 70);
             // 
-            // editarToolStripMenuItem
+            // alterarToolStripMenuItem
             // 
-            editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            editarToolStripMenuItem.Size = new Size(121, 22);
-            editarToolStripMenuItem.Text = "Editar";
+            alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
+            alterarToolStripMenuItem.Size = new Size(180, 22);
+            alterarToolStripMenuItem.Text = "Alterar";
             // 
-            // removerToolStripMenuItem
+            // deletarToolStripMenuItem
             // 
-            removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            removerToolStripMenuItem.Size = new Size(121, 22);
-            removerToolStripMenuItem.Text = "Remover";
+            deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
+            deletarToolStripMenuItem.Size = new Size(180, 22);
+            deletarToolStripMenuItem.Text = "Deletar";
+            deletarToolStripMenuItem.Click += deletarToolStripMenuItem_Click;
             // 
             // frmConsultarCategorias
             // 
@@ -113,7 +114,7 @@
             grbInformacoesBusca.ResumeLayout(false);
             grbInformacoesBusca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).EndInit();
-            ctxConsultarCategorias.ResumeLayout(false);
+            ctxMenuCategorias.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -123,8 +124,8 @@
         private Label lblBuscar;
         private TextBox txtBuscarCategorias;
         private DataGridView dgvCategorias;
-        private ContextMenuStrip ctxConsultarCategorias;
-        private ToolStripMenuItem editarToolStripMenuItem;
-        private ToolStripMenuItem removerToolStripMenuItem;
+        private ContextMenuStrip ctxMenuCategorias;
+        private ToolStripMenuItem alterarToolStripMenuItem;
+        private ToolStripMenuItem deletarToolStripMenuItem;
     }
 }
