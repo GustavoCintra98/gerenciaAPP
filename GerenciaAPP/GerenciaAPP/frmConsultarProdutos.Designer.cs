@@ -76,7 +76,9 @@
             dgvProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProdutos.Location = new Point(12, 116);
+            dgvProdutos.MultiSelect = false;
             dgvProdutos.Name = "dgvProdutos";
+            dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProdutos.Size = new Size(882, 510);
             dgvProdutos.TabIndex = 1;
             dgvProdutos.CellContentClick += dgvProdutos_CellContentClick;
@@ -85,18 +87,19 @@
             // 
             ctxMenuProdutos.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
             ctxMenuProdutos.Name = "ctxMenuProdutos";
-            ctxMenuProdutos.Size = new Size(181, 70);
+            ctxMenuProdutos.Size = new Size(112, 48);
+            ctxMenuProdutos.Opening += ctxMenuProdutos_Opening;
             // 
             // alterarToolStripMenuItem
             // 
             alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
-            alterarToolStripMenuItem.Size = new Size(180, 22);
+            alterarToolStripMenuItem.Size = new Size(111, 22);
             alterarToolStripMenuItem.Text = "Alterar";
             // 
             // deletarToolStripMenuItem
             // 
             deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            deletarToolStripMenuItem.Size = new Size(180, 22);
+            deletarToolStripMenuItem.Size = new Size(111, 22);
             deletarToolStripMenuItem.Text = "Deletar";
             deletarToolStripMenuItem.Click += deletarToolStripMenuItem_Click;
             // 

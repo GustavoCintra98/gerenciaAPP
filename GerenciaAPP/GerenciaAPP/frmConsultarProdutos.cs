@@ -18,6 +18,41 @@ namespace GerenciaAPP
             InitializeComponent();
         }
 
+        public DataTable CarregarProdutos()
+        {
+            try
+            {
+                //Instanciando a conexão
+                Conexao conexao = new Conexao();
+
+                //Query (Consulta) 
+                string sql = "SELECT id_produto AS CÓDIGO, " +
+                    "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' FROM tblprodutos";
+
+                using (SqlConnection con = conexao.Conectar())
+                {
+                    using (SqlCommand cmd = new SqlCommand(sql, con))
+                    {
+
+                        //Preencher o dataTable
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        dgvProdutos.DataSource = dt;
+
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
+
+                return null;
+            }
+        }
+
         private void txtBuscarProdutos_TextChanged(object sender, EventArgs e)
         {
             try
@@ -59,33 +94,7 @@ namespace GerenciaAPP
 
         private void frmConsultarProdutos_Load(object sender, EventArgs e)
         {
-            try
-            {
-                //Instanciando a conexão
-                Conexao conexao = new Conexao();
-
-                //Query (Consulta) 
-                string sql = "SELECT id_produto AS CÓDIGO, " +
-                    "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' FROM tblprodutos";
-
-                using (SqlConnection con = conexao.Conectar())
-                {
-                    using (SqlCommand cmd = new SqlCommand(sql, con))
-                    {
-
-                        //Preencher o dataTable
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
-
-                        dgvProdutos.DataSource = dt;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
-            }
+            CarregarProdutos();
         }
 
         private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -102,9 +111,43 @@ namespace GerenciaAPP
                 {
                     int idProduto = Convert.ToInt32(dgvProdutos.CurrentRow.Cells["CÓDIGO"].Value);
 
-                    DialogResult result = MessageBox.Show($"Tem certeza que deseja deletar este produto? {dgvProdutos.CurrentRow.Cells["NOME PROTUDO"].Value} ?", "Confirmação de Deleção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja deletar este produto: {dgvProdutos.CurrentRow.Cells["NOME PRODUTO"].Value}?", 
+                        "Confirmação de Deleção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+
+                    if (result == DialogResult.Yes)
+                    {
+                        Conexao conexao = new Conexao();
+
+                        string sql = "DELETE FROM tblprodutos WHERE id_produto = @id";
+
+                        using (SqlConnection con = conexao.Conectar())
+                        {
+                            using (SqlCommand cmd = new SqlCommand(sql, con))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idProduto);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                        MessageBox.Show("Produto deletado com sucesso!");
+
+                        CarregarProdutos();
+
+                    }    
+                    
                 }
+               
             }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao deletar: " + ex.Message);
+            }
+        }   
+
+        private void ctxMenuProdutos_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
