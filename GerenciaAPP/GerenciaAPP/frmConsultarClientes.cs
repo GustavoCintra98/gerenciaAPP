@@ -28,7 +28,7 @@ namespace GerenciaAPP
                 //Query (Consulta) 
                 string sql = "SELECT id_cliente AS CÓDIGO, " +
                     "nome_cliente AS NOME,cpf_cliente AS CPF,celular_cliente " +
-                    "AS CELULAR,email_cliente AS 'E-MAIL' FROM tblclientes";
+                    "AS CELULAR,email_cliente AS 'E-MAIL' FROM tblclientes WHERE status_cliente = 'A'";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -74,8 +74,8 @@ namespace GerenciaAPP
                 string sql = "SELECT id_cliente AS CÓDIGO, nome_cliente AS NOME, " +
                     "cpf_cliente AS CPF,celular_cliente AS CELULAR, " +
                     "email_cliente AS 'E-MAIL' " +
-                    "FROM tblclientes WHERE nome_cliente LIKE @filtro " +
-                    "OR cpf_cliente LIKE @filtro OR email_cliente LIKE @filtro";
+                    "FROM tblclientes WHERE (nome_cliente LIKE @filtro " +
+                    "OR cpf_cliente LIKE @filtro OR email_cliente LIKE @filtro) AND (status_cliente = 'A') ";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
