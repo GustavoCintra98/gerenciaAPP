@@ -34,7 +34,7 @@
             lblBuscar = new Label();
             dgvClientes = new DataGridView();
             ctxConsultarClientes = new ContextMenuStrip(components);
-            editarToolStripMenuItem = new ToolStripMenuItem();
+            alterarToolStripMenuItem = new ToolStripMenuItem();
             deletarToolStripMenuItem = new ToolStripMenuItem();
             grbInformacoesBusca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
@@ -77,31 +77,30 @@
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvClientes.ContextMenuStrip = ctxConsultarClientes;
             dgvClientes.Location = new Point(12, 94);
+            dgvClientes.MultiSelect = false;
             dgvClientes.Name = "dgvClientes";
+            dgvClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvClientes.Size = new Size(775, 512);
             dgvClientes.TabIndex = 1;
             // 
             // ctxConsultarClientes
             // 
-            ctxConsultarClientes.Items.AddRange(new ToolStripItem[] { editarToolStripMenuItem, deletarToolStripMenuItem });
+            ctxConsultarClientes.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
             ctxConsultarClientes.Name = "ctxConsultarClientes";
-            ctxConsultarClientes.Size = new Size(162, 48);
-            ctxConsultarClientes.Opening += ctx_Opening;
+            ctxConsultarClientes.Size = new Size(181, 70);
             // 
-            // editarToolStripMenuItem
+            // alterarToolStripMenuItem
             // 
-            editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            editarToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.E;
-            editarToolStripMenuItem.Size = new Size(161, 22);
-            editarToolStripMenuItem.Text = "Editar";
+            alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
+            alterarToolStripMenuItem.Size = new Size(180, 22);
+            alterarToolStripMenuItem.Text = "Alterar";
             // 
             // deletarToolStripMenuItem
             // 
             deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
-            deletarToolStripMenuItem.ShortcutKeys = Keys.Delete;
-            deletarToolStripMenuItem.Size = new Size(161, 22);
-            deletarToolStripMenuItem.Text = "Remover";
-            deletarToolStripMenuItem.Click += deletarToolStripMenuItem_Click;
+            deletarToolStripMenuItem.Size = new Size(180, 22);
+            deletarToolStripMenuItem.Text = "Deletar";
+            deletarToolStripMenuItem.Click += deletarToolStripMenuItem_Click_1;
             // 
             // frmConsultarClientes
             // 
@@ -127,7 +126,7 @@
         private TextBox txtBuscarClientes;
         private DataGridView dgvClientes;
         private ContextMenuStrip ctxConsultarClientes;
-        private ToolStripMenuItem editarToolStripMenuItem;
+        private ToolStripMenuItem alterarToolStripMenuItem;
         private ToolStripMenuItem deletarToolStripMenuItem;
     }
 }

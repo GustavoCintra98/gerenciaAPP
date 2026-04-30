@@ -26,7 +26,7 @@ namespace GerenciaAPP
             //Criando a query SQL
             string sql = "INSERT INTO tblclientes VALUES (@nomecompleto,@cpf,@datanascimento," +
              "@genero,@cep,@endereco,@numero,@bairro,@cidade,@uf,@complemento,@telefone,@celular," +
-             "@whatsapp,@email,@observacoes)";
+             "@whatsapp,@email,@observacoes,@status)";
 
             try
             {
@@ -51,6 +51,7 @@ namespace GerenciaAPP
                         cmd.Parameters.AddWithValue("@whatsapp", chkWhatsapp.Checked ? "S" : "N" );
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                         cmd.Parameters.AddWithValue("@observacoes", txtObservacoes.Text);
+                        cmd.Parameters.AddWithValue("@status", "A");
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Cliente cadastrado com sucesso!", 
                             "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

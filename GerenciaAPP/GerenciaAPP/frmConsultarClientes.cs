@@ -18,6 +18,41 @@ namespace GerenciaAPP
             InitializeComponent();
         }
 
+        public DataTable ConsultarClientes()
+        {
+            try
+            {
+                //Instanciando a conexão
+                Conexao conexao = new Conexao();
+
+                //Query (Consulta) 
+                string sql = "SELECT id_cliente AS CÓDIGO, " +
+                    "nome_cliente AS NOME,cpf_cliente AS CPF,celular_cliente " +
+                    "AS CELULAR,email_cliente AS 'E-MAIL' FROM tblclientes";
+
+                using (SqlConnection con = conexao.Conectar())
+                {
+                    using (SqlCommand cmd = new SqlCommand(sql, con))
+                    {
+                        //Preencher o dataTable
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        dgvClientes.DataSource = dt;
+
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
+
+                return null;
+            }
+        }
+
         private void ctx_Opening(object sender, CancelEventArgs e)
         {
 
@@ -69,32 +104,49 @@ namespace GerenciaAPP
 
         private void frmConsultarClientes_Load(object sender, EventArgs e)
         {
+            ConsultarClientes();
+        }
+
+        private void deletarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
             try
             {
-                //Instanciando a conexão
-                Conexao conexao = new Conexao();
-
-                //Query (Consulta) 
-                string sql = "SELECT id_cliente AS CÓDIGO, " +
-                    "nome_cliente AS NOME,cpf_cliente AS CPF,celular_cliente " +
-                    "AS CELULAR,email_cliente AS 'E-MAIL' FROM tblclientes";
-
-                using (SqlConnection con = conexao.Conectar())
+                if (dgvClientes.CurrentRow != null)
                 {
-                    using (SqlCommand cmd = new SqlCommand(sql, con))
-                    {
-                        //Preencher o dataTable
-                        SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        da.Fill(dt);
+                    int idCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells["CÓDIGO"].Value);
 
-                        dgvClientes.DataSource = dt;
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja inativa o cliente: " +
+                        $"{dgvClientes.CurrentRow.Cells["NOME"].Value}","Confirmação",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        Conexao conexao = new Conexao();
+
+                        string sql = "UPDATE tblclientes SET status_cliente = 'I' WHERE id_cliente = @id";
+
+                        using (SqlConnection con = conexao.Conectar())
+                        {
+                            using (SqlCommand cmd = new SqlCommand(sql, con))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idCliente);
+                                cmd.ExecuteNonQuery();
+
+                                ConsultarClientes();
+                            }
+                        }
+                        MessageBox.Show("Cliente removido com sucesso!", 
+                            "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+
+
                 }
             }
+
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
+                MessageBox.Show("Erro ao remover o cliente: " + ex.Message);
             }
         }
     }

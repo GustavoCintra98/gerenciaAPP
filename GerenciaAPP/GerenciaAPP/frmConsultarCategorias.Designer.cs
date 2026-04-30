@@ -77,8 +77,10 @@
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategorias.ContextMenuStrip = ctxMenuCategorias;
             dgvCategorias.Location = new Point(12, 93);
+            dgvCategorias.MultiSelect = false;
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.ReadOnly = true;
+            dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(546, 427);
             dgvCategorias.TabIndex = 1;
             // 
