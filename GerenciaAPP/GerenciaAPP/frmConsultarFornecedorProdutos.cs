@@ -30,11 +30,11 @@ namespace GerenciaAPP
                 //Query (Consulta) 
                 string sql = "SELECT id_fornecedor AS CÓDIGO," +
                     "cnpj_fornecedor AS CNPJ, razao_social_fornecedor AS 'RAZÃO SOCIAL' FROM tblfornecedores " +
-                    "WHERE cnpj_fornecedor LIKE @filtro " +
+                    "WHERE (cnpj_fornecedor LIKE @filtro " +
                     "OR razao_social_fornecedor LIKE @filtro " +
                     "OR nome_fantasia_fornecedor LIKE @filtro " +
                     "OR telefone_fornecedor LIKE @filtro " +
-                    "OR celular_fornecedor LIKE @filtro";
+                    "OR celular_fornecedor LIKE @filtro) AND (status_forcendor = 'A')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -70,7 +70,7 @@ namespace GerenciaAPP
 
                 //Query (Consulta) 
                 string sql = "SELECT id_fornecedor AS CÓDIGO," +
-                    "cnpj_fornecedor AS CNPJ, razao_social_fornecedor AS 'RAZÃO SOCIAL' FROM tblfornecedores ";
+                    "cnpj_fornecedor AS CNPJ, razao_social_fornecedor AS 'RAZÃO SOCIAL' FROM tblfornecedores WHERE status_fornecedor = 'A' ";
 
 
                 using (SqlConnection con = conexao.Conectar())

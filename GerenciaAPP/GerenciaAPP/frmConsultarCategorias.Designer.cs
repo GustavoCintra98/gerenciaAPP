@@ -83,6 +83,7 @@
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(546, 427);
             dgvCategorias.TabIndex = 1;
+            dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
             // 
             // ctxMenuCategorias
             // 

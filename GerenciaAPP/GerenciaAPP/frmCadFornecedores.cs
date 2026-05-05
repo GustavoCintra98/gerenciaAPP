@@ -24,7 +24,7 @@ namespace GerenciaAPP
             Conexao conexao = new Conexao();
 
             //Definir a query (consulta) SQL
-            string sql = "INSERT INTO tblfornecedores VALUES (@cnpj,@razaosocial,@nomefantasia,@porte,@cnaeprincipal,@cnaesecundario, @inscricaomunicipal,@inscricaoestadual, @cep,@endereco,@numero,@bairro,@cidade, @uf,@complemento,@telefone,@celular,@email,@responsavel,@observacoes)";
+            string sql = "INSERT INTO tblfornecedores VALUES (@cnpj,@razaosocial,@nomefantasia,@porte,@cnaeprincipal,@cnaesecundario, @inscricaomunicipal,@inscricaoestadual, @cep,@endereco,@numero,@bairro,@cidade, @uf,@complemento,@telefone,@celular,@email,@responsavel,@observacoes,@status_forncedor)";
 
             try
             {
@@ -52,6 +52,7 @@ namespace GerenciaAPP
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text);
                         cmd.Parameters.AddWithValue("@responsavel", txtResponsavel.Text);
                         cmd.Parameters.AddWithValue("@observacoes", txtObservacoes.Text);
+                        cmd.Parameters.AddWithValue("@status_fornecedor", "A");
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Fornecedor cadastrado com sucesso!",
                             "Sucesso", MessageBoxButtons.OK, 
@@ -75,7 +76,7 @@ namespace GerenciaAPP
                         mskCelular.Clear();
                         txtEmail.Clear();
                         txtResponsavel.Clear();
-                        txtObservacoes.Clear(); 
+                        txtObservacoes.Clear();
 
                     }
                 }

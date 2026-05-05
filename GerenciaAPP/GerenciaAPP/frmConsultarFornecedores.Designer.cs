@@ -33,12 +33,12 @@
             txtBuscarFornecedores = new TextBox();
             lblBuscar = new Label();
             dgvFornecedores = new DataGridView();
-            ctxConsultarFornecedores = new ContextMenuStrip(components);
-            editarToolStripMenuItem = new ToolStripMenuItem();
-            removerToolStripMenuItem = new ToolStripMenuItem();
+            ctxConsultarFornecedor = new ContextMenuStrip(components);
+            alterarToolStripMenuItem = new ToolStripMenuItem();
+            deletarToolStripMenuItem = new ToolStripMenuItem();
             grbInformacoesBusca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFornecedores).BeginInit();
-            ctxConsultarFornecedores.SuspendLayout();
+            ctxConsultarFornecedor.SuspendLayout();
             SuspendLayout();
             // 
             // grbInformacoesBusca
@@ -75,31 +75,34 @@
             dgvFornecedores.AllowUserToDeleteRows = false;
             dgvFornecedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvFornecedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFornecedores.ContextMenuStrip = ctxConsultarFornecedores;
+            dgvFornecedores.ContextMenuStrip = ctxConsultarFornecedor;
             dgvFornecedores.Location = new Point(12, 93);
             dgvFornecedores.Name = "dgvFornecedores";
+            dgvFornecedores.ReadOnly = true;
+            dgvFornecedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFornecedores.Size = new Size(776, 515);
             dgvFornecedores.TabIndex = 1;
+            dgvFornecedores.CellContentClick += dgvFornecedores_CellContentClick;
             // 
-            // ctxConsultarFornecedores
+            // ctxConsultarFornecedor
             // 
-            ctxConsultarFornecedores.Items.AddRange(new ToolStripItem[] { editarToolStripMenuItem, removerToolStripMenuItem });
-            ctxConsultarFornecedores.Name = "ctxConsultarFornecedores";
-            ctxConsultarFornecedores.Size = new Size(162, 48);
+            ctxConsultarFornecedor.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
+            ctxConsultarFornecedor.Name = "ctxConsultarFornecedor";
+            ctxConsultarFornecedor.Size = new Size(112, 48);
+            ctxConsultarFornecedor.Opening += contextMenuStrip1_Opening;
             // 
-            // editarToolStripMenuItem
+            // alterarToolStripMenuItem
             // 
-            editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            editarToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.E;
-            editarToolStripMenuItem.Size = new Size(161, 22);
-            editarToolStripMenuItem.Text = "Editar";
+            alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
+            alterarToolStripMenuItem.Size = new Size(111, 22);
+            alterarToolStripMenuItem.Text = "Alterar";
             // 
-            // removerToolStripMenuItem
+            // deletarToolStripMenuItem
             // 
-            removerToolStripMenuItem.Name = "removerToolStripMenuItem";
-            removerToolStripMenuItem.ShortcutKeys = Keys.Delete;
-            removerToolStripMenuItem.Size = new Size(161, 22);
-            removerToolStripMenuItem.Text = "Remover";
+            deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
+            deletarToolStripMenuItem.Size = new Size(111, 22);
+            deletarToolStripMenuItem.Text = "Deletar";
+            deletarToolStripMenuItem.Click += deletarToolStripMenuItem_Click;
             // 
             // frmConsultarFornecedores
             // 
@@ -114,7 +117,7 @@
             grbInformacoesBusca.ResumeLayout(false);
             grbInformacoesBusca.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFornecedores).EndInit();
-            ctxConsultarFornecedores.ResumeLayout(false);
+            ctxConsultarFornecedor.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -124,8 +127,8 @@
         private Label lblBuscar;
         private TextBox txtBuscarFornecedores;
         private DataGridView dgvFornecedores;
-        private ContextMenuStrip ctxConsultarFornecedores;
-        private ToolStripMenuItem editarToolStripMenuItem;
-        private ToolStripMenuItem removerToolStripMenuItem;
+        private ContextMenuStrip ctxConsultarFornecedor;
+        private ToolStripMenuItem alterarToolStripMenuItem;
+        private ToolStripMenuItem deletarToolStripMenuItem;
     }
 }

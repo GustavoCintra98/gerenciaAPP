@@ -18,12 +18,7 @@ namespace GerenciaAPP
             InitializeComponent();
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void frmConsultarCategorias_Load(object sender, EventArgs e)
+        public DataTable ConsultarCategorias()
         {
             try
             {
@@ -33,7 +28,7 @@ namespace GerenciaAPP
                 //Query (Consulta) 
                 string sql = "SELECT id_categoria AS CÓDIGO, " +
                     "nome_categoria AS NOME, descricao_categoria " +
-                    "AS DESCRIÇÃO FROM tblcategorias";
+                    "AS DESCRIÇÃO FROM tblcategorias WHERE status_categori = 'A' ";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -46,13 +41,27 @@ namespace GerenciaAPP
                         da.Fill(dt);
 
                         dgvCategorias.DataSource = dt;
+
+                        return dt;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
+
+                return null;
             }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void frmConsultarCategorias_Load(object sender, EventArgs e)
+        {
+            ConsultarCategorias();
         }
 
         private void txtBuscarCategorias_TextChanged(object sender, EventArgs e)
@@ -64,8 +73,8 @@ namespace GerenciaAPP
 
                 //Query (Consulta) 
                 string sql = "SELECT id_categoria AS CÓDIGO, nome_categoria AS NOME, descricao_categoria AS DESCRIÇÃO FROM tblcategorias " +
-                    "WHERE nome_categoria LIKE @filtro " +
-                    "OR descricao_categoria LIKE @filtro";
+                    "WHERE (nome_categoria LIKE @filtro " +
+                    "OR descricao_categoria LIKE @filtro) AND (satus_categoria = 'A')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -107,7 +116,7 @@ namespace GerenciaAPP
                     {
                         Conexao conexao = new Conexao();
 
-                        string sql = "DELETE FROM tblcategorias WHERE id_categoria = @id";
+                        string sql = "UPDATE tblcategorias SET status_categoria = 'I' WHERE id_categoria = @id";
 
                         using (SqlConnection con = conexao.Conectar())
                         {
@@ -126,6 +135,11 @@ namespace GerenciaAPP
             {
                 MessageBox.Show("Erro ao deletar a categoria: " + ex.Message);
             }
+
+        }
+
+        private void dgvCategorias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

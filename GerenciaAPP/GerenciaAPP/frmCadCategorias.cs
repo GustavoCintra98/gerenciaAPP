@@ -34,7 +34,7 @@ namespace GerenciaAPP
             Conexao conexao = new Conexao();
 
             //Criando a query SQL.
-            string sql = "INSERT INTO tblcategorias VALUES (@nome, @descricao)";
+            string sql = "INSERT INTO tblcategorias VALUES (@nome, @descricao, @satus_categoria)";
 
             //Abrindo a conexão para inserção
 
@@ -46,6 +46,7 @@ namespace GerenciaAPP
                     {
                         cmd.Parameters.AddWithValue("@nome", txtNomeCategoria.Text);
                         cmd.Parameters.AddWithValue("@descricao", txtDescricaoCategoria.Text);
+                        cmd.Parameters.AddWithValue("@status_categoria", "A");
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Categoria cadastrada com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         txtNomeCategoria.Clear();
