@@ -73,5 +73,10 @@ namespace GerenciaAPP
             frmConsultarProdutos frmConsultarProdutos = new frmConsultarProdutos();
             frmConsultarProdutos.Show();
         }
+
+        private void categoriasToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

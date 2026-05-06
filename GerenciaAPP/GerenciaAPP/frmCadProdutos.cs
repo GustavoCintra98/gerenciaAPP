@@ -32,12 +32,10 @@ namespace GerenciaAPP
             Conexao conexao = new Conexao();
 
             //Criando a query SQL
-            string sql = "INSERT INTO tblprodutos VALUES (@sku," +
-                "@ean,@descricao,@categoria,@unidade,@prccompra," +
-                "@prcvenda,@peso,@composicao,@comprimento," +
-                "@largura, @profundidade, @ncm,@fornecedor," +
-                "@estminimo,@estmaximo,@marca,@datavalidade," +
-                "@descricaodetalhada,@img1,@img2,@img3,@img4)";
+            string sql = "INSERT INTO tblprodutos VALUES (@sku,@ean,@descricao," +
+                "@categoria,@unidade,@prccompra,@prcvenda,@peso,@composicao,@comprimento," +
+                "@largura,@profundidade,@ncm,@fornecedor,@estminimo,@estmaximo,@marca," +
+                "@datavalidade,@descricaodetalhada,@img1,@img2,@img3,@img4,@status_produto)";
 
             try
             {
@@ -68,6 +66,7 @@ namespace GerenciaAPP
                         cmd.Parameters.AddWithValue("@img2", "");
                         cmd.Parameters.AddWithValue("@img3", "");
                         cmd.Parameters.AddWithValue("@img4", "");
+                        cmd.Parameters.AddWithValue("@status_produto", "A");
 
                         DateTime? dataValidade = null;
 
@@ -84,10 +83,6 @@ namespace GerenciaAPP
                         {
                             cmd.Parameters.AddWithValue("@datavalidade", DBNull.Value);
                         }
-
-
-
-
 
                         cmd.ExecuteNonQuery();
 

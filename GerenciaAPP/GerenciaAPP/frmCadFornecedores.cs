@@ -24,7 +24,7 @@ namespace GerenciaAPP
             Conexao conexao = new Conexao();
 
             //Definir a query (consulta) SQL
-            string sql = "INSERT INTO tblfornecedores VALUES (@cnpj,@razaosocial,@nomefantasia,@porte,@cnaeprincipal,@cnaesecundario, @inscricaomunicipal,@inscricaoestadual, @cep,@endereco,@numero,@bairro,@cidade, @uf,@complemento,@telefone,@celular,@email,@responsavel,@observacoes,@status_forncedor)";
+            string sql = "INSERT INTO tblfornecedores VALUES (@cnpj,@razaosocial,@nomefantasia,@porte,@cnaeprincipal,@cnaesecundario, @inscricaomunicipal,@inscricaoestadual, @cep,@endereco,@numero,@bairro,@cidade, @uf,@complemento,@telefone,@celular,@email,@responsavel,@observacoes,@status_fornecedor)";
 
             try
             {

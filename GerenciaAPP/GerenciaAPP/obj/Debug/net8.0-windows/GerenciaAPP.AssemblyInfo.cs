@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GerenciaAPP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df5912deba4dbe5169938e68fe33868af54eaf59")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f900239e23530acc2a3ff1dbc469810a3cc2ce5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GerenciaAPP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GerenciaAPP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

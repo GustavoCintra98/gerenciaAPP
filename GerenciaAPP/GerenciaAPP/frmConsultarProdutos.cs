@@ -27,7 +27,7 @@ namespace GerenciaAPP
 
                 //Query (Consulta) 
                 string sql = "SELECT id_produto AS CÓDIGO, " +
-                    "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' FROM tblprodutos";
+                    "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' FROM tblprodutos WHERE status_produto = 'A'";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -63,9 +63,9 @@ namespace GerenciaAPP
                 //Query (Consulta) 
                 string sql = "SELECT id_produto AS CÓDIGO, " +
                     "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' FROM tblprodutos " +
-                    "WHERE sku_produto LIKE @filtro " +
+                    "WHERE (sku_produto LIKE @filtro " +
                     "OR ean_produto LIKE @filtro " +
-                    "OR descricao_produto LIKE @filtro";
+                    "OR descricao_produto LIKE @filtro) AND (status_produto = 'A')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -119,7 +119,7 @@ namespace GerenciaAPP
                     {
                         Conexao conexao = new Conexao();
 
-                        string sql = "DELETE FROM tblprodutos WHERE id_produto = @id";
+                        string sql = "UPDATE tblprodutos SET status_produto = 'I' WHERE id_produto = @id";
 
                         using (SqlConnection con = conexao.Conectar())
                         {

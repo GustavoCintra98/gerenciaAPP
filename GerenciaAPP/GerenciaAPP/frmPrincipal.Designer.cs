@@ -46,12 +46,17 @@
             configuraçõesToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             printDialog1 = new PrintDialog();
+            consultasInativasToolStripMenuItem = new ToolStripMenuItem();
+            categoriasToolStripMenuItem2 = new ToolStripMenuItem();
+            clientesToolStripMenuItem2 = new ToolStripMenuItem();
+            fornecedoresToolStripMenuItem2 = new ToolStripMenuItem();
+            produtosToolStripMenuItem2 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, consultasToolStripMenuItem, fiscalToolStripMenuItem, relatóriosToolStripMenuItem, configuraçõesToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, consultasToolStripMenuItem, consultasInativasToolStripMenuItem, fiscalToolStripMenuItem, relatóriosToolStripMenuItem, configuraçõesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(919, 24);
@@ -175,6 +180,38 @@
             // 
             printDialog1.UseEXDialog = true;
             // 
+            // consultasInativasToolStripMenuItem
+            // 
+            consultasInativasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { categoriasToolStripMenuItem2, clientesToolStripMenuItem2, fornecedoresToolStripMenuItem2, produtosToolStripMenuItem2 });
+            consultasInativasToolStripMenuItem.Name = "consultasInativasToolStripMenuItem";
+            consultasInativasToolStripMenuItem.Size = new Size(114, 20);
+            consultasInativasToolStripMenuItem.Text = "Consultas Inativas";
+            // 
+            // categoriasToolStripMenuItem2
+            // 
+            categoriasToolStripMenuItem2.Name = "categoriasToolStripMenuItem2";
+            categoriasToolStripMenuItem2.Size = new Size(180, 22);
+            categoriasToolStripMenuItem2.Text = "Categorias";
+            categoriasToolStripMenuItem2.Click += categoriasToolStripMenuItem2_Click;
+            // 
+            // clientesToolStripMenuItem2
+            // 
+            clientesToolStripMenuItem2.Name = "clientesToolStripMenuItem2";
+            clientesToolStripMenuItem2.Size = new Size(180, 22);
+            clientesToolStripMenuItem2.Text = "Clientes";
+            // 
+            // fornecedoresToolStripMenuItem2
+            // 
+            fornecedoresToolStripMenuItem2.Name = "fornecedoresToolStripMenuItem2";
+            fornecedoresToolStripMenuItem2.Size = new Size(180, 22);
+            fornecedoresToolStripMenuItem2.Text = "Fornecedores";
+            // 
+            // produtosToolStripMenuItem2
+            // 
+            produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
+            produtosToolStripMenuItem2.Size = new Size(180, 22);
+            produtosToolStripMenuItem2.Text = "Produtos";
+            // 
             // frmPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -210,5 +247,10 @@
         private ToolStripMenuItem fornecedoresToolStripMenuItem1;
         private ToolStripMenuItem produtosToolStripMenuItem1;
         private PrintDialog printDialog1;
+        private ToolStripMenuItem consultasInativasToolStripMenuItem;
+        private ToolStripMenuItem categoriasToolStripMenuItem2;
+        private ToolStripMenuItem clientesToolStripMenuItem2;
+        private ToolStripMenuItem fornecedoresToolStripMenuItem2;
+        private ToolStripMenuItem produtosToolStripMenuItem2;
     }
 }

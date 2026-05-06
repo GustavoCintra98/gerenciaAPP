@@ -28,7 +28,7 @@ namespace GerenciaAPP
                 //Query (Consulta) 
                 string sql = "SELECT id_categoria AS CÓDIGO, " +
                     "nome_categoria AS NOME, descricao_categoria " +
-                    "AS DESCRIÇÃO FROM tblcategorias WHERE status_categori = 'A' ";
+                    "AS DESCRIÇÃO FROM tblcategorias WHERE status_categoria = 'A' ";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -74,7 +74,7 @@ namespace GerenciaAPP
                 //Query (Consulta) 
                 string sql = "SELECT id_categoria AS CÓDIGO, nome_categoria AS NOME, descricao_categoria AS DESCRIÇÃO FROM tblcategorias " +
                     "WHERE (nome_categoria LIKE @filtro " +
-                    "OR descricao_categoria LIKE @filtro) AND (satus_categoria = 'A')";
+                    "OR descricao_categoria LIKE @filtro) AND (status_categoria = 'A')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -127,6 +127,8 @@ namespace GerenciaAPP
                             }
                         }
                         MessageBox.Show("Categoria deletada com sucesso!");
+
+                        ConsultarCategorias();
                     }
                 }
             }
