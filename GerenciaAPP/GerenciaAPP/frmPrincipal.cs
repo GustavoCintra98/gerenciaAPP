@@ -76,7 +76,20 @@ namespace GerenciaAPP
 
         private void categoriasToolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            frmConsultarCategoriaInativa frmConsultarCategoriaInativa = new frmConsultarCategoriaInativa();
+            frmConsultarCategoriaInativa.ShowDialog();
+        }
 
+        private void clientesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmConsultarClienteInativo frmConsultarClienteInativo = new frmConsultarClienteInativo();
+            frmConsultarClienteInativo.ShowDialog();
+        }
+
+        private void fornecedoresToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmConsultarFornecedorInativo frmConsultarFornecedorInativo = new frmConsultarFornecedorInativo();
+            frmConsultarFornecedorInativo.ShowDialog();
         }
     }
 }

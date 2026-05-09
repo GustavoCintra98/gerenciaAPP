@@ -34,7 +34,7 @@ namespace GerenciaAPP
             Conexao conexao = new Conexao();
 
             //Criando a query SQL.
-            string sql = "INSERT INTO tblcategorias VALUES (@nome, @descricao, @satus_categoria)";
+            string sql = "INSERT INTO tblcategorias VALUES (@nome, @descricao, @status_categoria)";
 
             //Abrindo a conexão para inserção
 

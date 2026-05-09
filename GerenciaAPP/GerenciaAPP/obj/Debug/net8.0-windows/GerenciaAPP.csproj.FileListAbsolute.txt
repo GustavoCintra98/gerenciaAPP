@@ -140,3 +140,5 @@ C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\
 C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.genruntimeconfig.cache
 C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\ref\GerenciaAPP.dll
 C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.frmConsultarCategoriaInativa.resources
+C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.frmConsultarClienteInativo.resources
+C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.frmConsultarFornecedorInativo.resources

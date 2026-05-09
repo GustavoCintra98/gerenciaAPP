@@ -27,7 +27,7 @@ namespace GerenciaAPP
 
                 //Query (Consulta) 
                 string sql = "SELECT id_fornecedor AS CÓDIGO," +
-                    "cnpj_fornecedor AS CNPJ, razao_social_fornecedor AS 'RAZÃO SOCIAL' FROM tblfornecedores WHERE status_forncedor = 'A'";
+                    "cnpj_fornecedor AS CNPJ, razao_social_fornecedor AS 'RAZÃO SOCIAL' FROM tblfornecedores WHERE status_fornecedor = 'A'";
 
 
                 using (SqlConnection con = conexao.Conectar())

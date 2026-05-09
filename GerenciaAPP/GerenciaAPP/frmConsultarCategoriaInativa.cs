@@ -29,6 +29,7 @@ namespace GerenciaAPP
                 string sql = "SELECT id_categoria AS CÓDIGO, " +
                     "nome_categoria AS NOME, descricao_categoria " +
                     "AS DESCRIÇÃO FROM tblcategorias WHERE status_categoria = 'I'";
+
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
@@ -63,7 +64,7 @@ namespace GerenciaAPP
 
                 string sql = "SELECT id_categoria AS CÓDIGO, nome_categoria AS NOME, descricao_categoria AS DESCRIÇÃO FROM tblcategorias " +
                     "WHERE (nome_categoria LIKE @filtro " +
-                    "OR descricao_categoria LIKE @filtro) AND (statu_categoria = 'I')";
+                    "OR descricao_categoria LIKE @filtro) AND (status_categoria = 'I')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -90,6 +91,55 @@ namespace GerenciaAPP
         private void frmConsultarCategoriaInativa_Load(object sender, EventArgs e)
         {
             CarregarCategoriasInativas();
+        }
+
+        private void dgvConsultarCategoriaInativa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void restaurarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvConsultarCategoriaInativa.CurrentRow != null)
+                {
+                    int idCategoria = Convert.ToInt32(dgvConsultarCategoriaInativa.CurrentRow.Cells["CÓDIGO"].Value);
+
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja restaura esta categoria: {dgvConsultarCategoriaInativa.CurrentRow.Cells["NOME"].Value}?",
+                        "Confirmação de Restauração", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        Conexao conexao = new Conexao();
+
+                        string sql = "UPDATE tblcategorias SET status_categoria = 'A' WHERE id_categoria = @id";
+
+                        using (SqlConnection con = conexao.Conectar())
+                        {
+                            using (SqlCommand cmd = new SqlCommand(sql, con))
+                            {
+                                cmd.Parameters.AddWithValue("@id", idCategoria);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                        MessageBox.Show("Categoria restaurada com sucesso!");
+
+                        CarregarCategoriasInativas();
+
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao restaurar: " + ex.Message);
+            }
         }
     }
 }
