@@ -91,5 +91,16 @@ namespace GerenciaAPP
             frmConsultarFornecedorInativo frmConsultarFornecedorInativo = new frmConsultarFornecedorInativo();
             frmConsultarFornecedorInativo.ShowDialog();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void produtosToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmConsultarProdutosInativos frmConsultarProdutosInativos = new frmConsultarProdutosInativos();
+            frmConsultarProdutosInativos.ShowDialog();
+        }
     }
 }

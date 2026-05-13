@@ -491,6 +491,7 @@
             cmbCategoria.Name = "cmbCategoria";
             cmbCategoria.Size = new Size(163, 23);
             cmbCategoria.TabIndex = 3;
+            cmbCategoria.SelectedIndexChanged += cmbCategoria_SelectedIndexChanged;
             // 
             // lblCategoria
             // 

@@ -109,7 +109,7 @@
             // 
             categoriasToolStripMenuItem1.Name = "categoriasToolStripMenuItem1";
             categoriasToolStripMenuItem1.ShortcutKeys = Keys.F2;
-            categoriasToolStripMenuItem1.Size = new Size(180, 22);
+            categoriasToolStripMenuItem1.Size = new Size(164, 22);
             categoriasToolStripMenuItem1.Text = "Categorias";
             categoriasToolStripMenuItem1.Click += categoriasToolStripMenuItem1_Click_1;
             // 
@@ -117,7 +117,7 @@
             // 
             clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
             clientesToolStripMenuItem1.ShortcutKeys = Keys.F3;
-            clientesToolStripMenuItem1.Size = new Size(180, 22);
+            clientesToolStripMenuItem1.Size = new Size(164, 22);
             clientesToolStripMenuItem1.Text = "Clientes";
             clientesToolStripMenuItem1.Click += clientesToolStripMenuItem1_Click;
             // 
@@ -125,7 +125,7 @@
             // 
             fornecedoresToolStripMenuItem1.Name = "fornecedoresToolStripMenuItem1";
             fornecedoresToolStripMenuItem1.ShortcutKeys = Keys.F4;
-            fornecedoresToolStripMenuItem1.Size = new Size(180, 22);
+            fornecedoresToolStripMenuItem1.Size = new Size(164, 22);
             fornecedoresToolStripMenuItem1.Text = "Fornecedores";
             fornecedoresToolStripMenuItem1.Click += fornecedoresToolStripMenuItem1_Click;
             // 
@@ -133,7 +133,7 @@
             // 
             produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
             produtosToolStripMenuItem1.ShortcutKeys = Keys.F5;
-            produtosToolStripMenuItem1.Size = new Size(180, 22);
+            produtosToolStripMenuItem1.Size = new Size(164, 22);
             produtosToolStripMenuItem1.Text = "Produtos";
             produtosToolStripMenuItem1.Click += produtosToolStripMenuItem1_Click;
             // 
@@ -170,6 +170,7 @@
             produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
             produtosToolStripMenuItem2.Size = new Size(180, 22);
             produtosToolStripMenuItem2.Text = "Produtos";
+            produtosToolStripMenuItem2.Click += produtosToolStripMenuItem2_Click;
             // 
             // fiscalToolStripMenuItem
             // 
@@ -223,6 +224,7 @@
             Controls.Add(menuStrip1);
             Name = "frmPrincipal";
             Text = "GerenciaAPP - Principal";
+            Load += frmPrincipal_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

@@ -189,22 +189,26 @@ namespace GerenciaAPP
         {
             Conexao conexao = new Conexao();
 
-            string sql = "SELECT * FROM tblcategorias";
+            string sql = "SELECT * FROM tblcategorias WHERE status_categoria = 'A' ORDER BY nome_categoria";
 
             using (SqlConnection con = conexao.Conectar())
             {
                 using (SqlCommand cmd = new SqlCommand(sql, con))
                 {
-                    
+
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
 
                         DataTable dt = new DataTable();
 
+                        
+
                         dt.Load(dr);
                         cmbCategoria.DataSource = dt;
                         cmbCategoria.DisplayMember = "nome_categoria";
                         cmbCategoria.ValueMember = "id_categoria";
+
+                        cmbCategoria.SelectedIndex = -1;
 
 
                     }
@@ -240,6 +244,11 @@ namespace GerenciaAPP
         }
 
         private void numUpPrecoCompra_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
