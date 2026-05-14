@@ -143,3 +143,4 @@ C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\
 C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.frmConsultarClienteInativo.resources
 C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.frmConsultarFornecedorInativo.resources
 C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.frmConsultarProdutosInativos.resources
+C:\Users\gustavo.cintra\Documents\GerenciaAPP\GerenciaAPP\GerenciaAPP\obj\Debug\net8.0-windows\GerenciaAPP.frmPainelVendas.resources

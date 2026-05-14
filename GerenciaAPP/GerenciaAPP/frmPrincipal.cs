@@ -102,5 +102,11 @@ namespace GerenciaAPP
             frmConsultarProdutosInativos frmConsultarProdutosInativos = new frmConsultarProdutosInativos();
             frmConsultarProdutosInativos.ShowDialog();
         }
+
+        private void pDVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPainelVendas frmPainelVendas = new frmPainelVendas();
+            frmPainelVendas.ShowDialog();
+        }
     }
 }

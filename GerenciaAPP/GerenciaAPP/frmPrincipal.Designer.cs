@@ -147,28 +147,28 @@
             // categoriasToolStripMenuItem2
             // 
             categoriasToolStripMenuItem2.Name = "categoriasToolStripMenuItem2";
-            categoriasToolStripMenuItem2.Size = new Size(180, 22);
+            categoriasToolStripMenuItem2.Size = new Size(145, 22);
             categoriasToolStripMenuItem2.Text = "Categorias";
             categoriasToolStripMenuItem2.Click += categoriasToolStripMenuItem2_Click;
             // 
             // clientesToolStripMenuItem2
             // 
             clientesToolStripMenuItem2.Name = "clientesToolStripMenuItem2";
-            clientesToolStripMenuItem2.Size = new Size(180, 22);
+            clientesToolStripMenuItem2.Size = new Size(145, 22);
             clientesToolStripMenuItem2.Text = "Clientes";
             clientesToolStripMenuItem2.Click += clientesToolStripMenuItem2_Click;
             // 
             // fornecedoresToolStripMenuItem2
             // 
             fornecedoresToolStripMenuItem2.Name = "fornecedoresToolStripMenuItem2";
-            fornecedoresToolStripMenuItem2.Size = new Size(180, 22);
+            fornecedoresToolStripMenuItem2.Size = new Size(145, 22);
             fornecedoresToolStripMenuItem2.Text = "Fornecedores";
             fornecedoresToolStripMenuItem2.Click += fornecedoresToolStripMenuItem2_Click;
             // 
             // produtosToolStripMenuItem2
             // 
             produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
-            produtosToolStripMenuItem2.Size = new Size(180, 22);
+            produtosToolStripMenuItem2.Size = new Size(145, 22);
             produtosToolStripMenuItem2.Text = "Produtos";
             produtosToolStripMenuItem2.Click += produtosToolStripMenuItem2_Click;
             // 
@@ -176,19 +176,20 @@
             // 
             fiscalToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pDVToolStripMenuItem, emissãoNFeToolStripMenuItem });
             fiscalToolStripMenuItem.Name = "fiscalToolStripMenuItem";
-            fiscalToolStripMenuItem.Size = new Size(48, 20);
-            fiscalToolStripMenuItem.Text = "Fiscal";
+            fiscalToolStripMenuItem.Size = new Size(56, 20);
+            fiscalToolStripMenuItem.Text = "Vendas";
             // 
             // pDVToolStripMenuItem
             // 
             pDVToolStripMenuItem.Name = "pDVToolStripMenuItem";
-            pDVToolStripMenuItem.Size = new Size(146, 22);
+            pDVToolStripMenuItem.Size = new Size(180, 22);
             pDVToolStripMenuItem.Text = "PDV";
+            pDVToolStripMenuItem.Click += pDVToolStripMenuItem_Click;
             // 
             // emissãoNFeToolStripMenuItem
             // 
             emissãoNFeToolStripMenuItem.Name = "emissãoNFeToolStripMenuItem";
-            emissãoNFeToolStripMenuItem.Size = new Size(146, 22);
+            emissãoNFeToolStripMenuItem.Size = new Size(180, 22);
             emissãoNFeToolStripMenuItem.Text = "Emissão NF-e";
             // 
             // relatóriosToolStripMenuItem
