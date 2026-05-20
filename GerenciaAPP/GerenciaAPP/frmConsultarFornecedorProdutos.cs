@@ -34,7 +34,7 @@ namespace GerenciaAPP
                     "OR razao_social_fornecedor LIKE @filtro " +
                     "OR nome_fantasia_fornecedor LIKE @filtro " +
                     "OR telefone_fornecedor LIKE @filtro " +
-                    "OR celular_fornecedor LIKE @filtro) AND (status_forcendor = 'A')";
+                    "OR celular_fornecedor LIKE @filtro) AND (status_fornecedor = 'A')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {

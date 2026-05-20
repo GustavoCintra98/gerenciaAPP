@@ -32,10 +32,12 @@ namespace GerenciaAPP
             Conexao conexao = new Conexao();
 
             //Criando a query SQL
-            string sql = "INSERT INTO tblprodutos VALUES (@sku,@ean,@descricao," +
-                "@categoria,@unidade,@prccompra,@prcvenda,@peso,@composicao,@comprimento," +
-                "@largura,@profundidade,@ncm,@fornecedor,@estminimo,@estmaximo,@marca," +
-                "@datavalidade,@descricaodetalhada,@img1,@img2,@img3,@img4,@status_produto)";
+            string sql = "INSERT INTO tblprodutos VALUES (@sku," +
+                "@ean,@descricao,@categoria,@unidade,@prccompra," +
+                "@prcvenda,@peso,@composicao,@comprimento," +
+                "@largura, @profundidade, @ncm,@fornecedor," +
+                "@estminimo,@estmaximo,@marca,@datavalidade," +
+                "@descricaodetalhada,@img1,@img2,@img3,@img4,@status_produto)";
 
             try
             {
@@ -83,6 +85,10 @@ namespace GerenciaAPP
                         {
                             cmd.Parameters.AddWithValue("@datavalidade", DBNull.Value);
                         }
+
+
+
+
 
                         cmd.ExecuteNonQuery();
 
@@ -189,7 +195,7 @@ namespace GerenciaAPP
         {
             Conexao conexao = new Conexao();
 
-            string sql = "SELECT * FROM tblcategorias WHERE status_categoria = 'A' ORDER BY nome_categoria";
+            string sql = "SELECT * FROM tblcategorias";
 
             using (SqlConnection con = conexao.Conectar())
             {
@@ -201,14 +207,10 @@ namespace GerenciaAPP
 
                         DataTable dt = new DataTable();
 
-                        
-
                         dt.Load(dr);
                         cmbCategoria.DataSource = dt;
                         cmbCategoria.DisplayMember = "nome_categoria";
                         cmbCategoria.ValueMember = "id_categoria";
-
-                        cmbCategoria.SelectedIndex = -1;
 
 
                     }

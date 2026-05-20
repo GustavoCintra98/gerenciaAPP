@@ -76,31 +76,28 @@ namespace GerenciaAPP
 
         private void categoriasToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmConsultarCategoriaInativa frmConsultarCategoriaInativa = new frmConsultarCategoriaInativa();
-            frmConsultarCategoriaInativa.ShowDialog();
+            frmConsultarCategoriasInativas frmConsultarCategoriasInativas = new frmConsultarCategoriasInativas();
+            frmConsultarCategoriasInativas.Show();
         }
 
         private void clientesToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmConsultarClienteInativo frmConsultarClienteInativo = new frmConsultarClienteInativo();
-            frmConsultarClienteInativo.ShowDialog();
+            frmConsultarClientesInativos frmConsultarClientesInativos = new frmConsultarClientesInativos();
+            frmConsultarClientesInativos.Show();
         }
 
         private void fornecedoresToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmConsultarFornecedorInativo frmConsultarFornecedorInativo = new frmConsultarFornecedorInativo();
-            frmConsultarFornecedorInativo.ShowDialog();
-        }
-
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-
+            frmConsultarFornecedoresInativos frmConsultarFornecedoresInativos =
+                new frmConsultarFornecedoresInativos();
+            frmConsultarFornecedoresInativos.Show();
         }
 
         private void produtosToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frmConsultarProdutosInativos frmConsultarProdutosInativos = new frmConsultarProdutosInativos();
-            frmConsultarProdutosInativos.ShowDialog();
+            frmConsultarProdutosInativos frmConsultarProdutosInativos
+                = new frmConsultarProdutosInativos();
+            frmConsultarProdutosInativos.Show();
         }
 
         private void pDVToolStripMenuItem_Click(object sender, EventArgs e)

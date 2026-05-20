@@ -550,7 +550,7 @@
             lblSKU.Location = new Point(6, 19);
             lblSKU.Name = "lblSKU";
             lblSKU.Size = new Size(31, 15);
-            lblSKU.TabIndex = 1;
+            lblSKU.TabIndex = 0;
             lblSKU.Text = "SKU:";
             // 
             // btnCadastrar

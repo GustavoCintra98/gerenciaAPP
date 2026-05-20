@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,17 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace GerenciaAPP
 {
-    public partial class frmConsultarCategorias : Form
+    public partial class frmConsultarClientesInativos : Form
     {
-        public frmConsultarCategorias()
+        public frmConsultarClientesInativos()
         {
             InitializeComponent();
         }
 
-        public DataTable CarregarCategorias()
+        public DataTable ConsultarClientesInativos()
         {
             try
             {
@@ -26,21 +26,20 @@ namespace GerenciaAPP
                 Conexao conexao = new Conexao();
 
                 //Query (Consulta) 
-                string sql = "SELECT id_categoria AS CÓDIGO, " +
-                    "nome_categoria AS NOME, descricao_categoria " +
-                    "AS DESCRIÇÃO FROM tblcategorias WHERE status_categoria = 'A'";
+                string sql = "SELECT id_cliente AS CÓDIGO, " +
+                    "nome_cliente AS NOME,cpf_cliente AS CPF,celular_cliente " +
+                    "AS CELULAR,email_cliente AS 'E-MAIL' FROM tblclientes WHERE status_cliente = 'I'";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
-
                         //Preencher o dataTable
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
 
-                        dgvCategorias.DataSource = dt;
+                        dgvClientesInativos.DataSource = dt;
 
                         return dt;
                     }
@@ -53,17 +52,7 @@ namespace GerenciaAPP
             }
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void frmConsultarCategorias_Load(object sender, EventArgs e)
-        {
-            CarregarCategorias();
-        }
-
-        private void txtBuscarCategorias_TextChanged(object sender, EventArgs e)
+        private void txtBuscarClientesInativos_TextChanged(object sender, EventArgs e)
         {
             try
             {
@@ -71,19 +60,20 @@ namespace GerenciaAPP
                 Conexao conexao = new Conexao();
 
                 //Query (Consulta) 
-                string sql = "SELECT id_categoria AS CÓDIGO, nome_categoria AS NOME, descricao_categoria AS DESCRIÇÃO FROM tblcategorias " +
-                    "WHERE (nome_categoria LIKE @filtro " +
-                    "OR descricao_categoria LIKE @filtro) " +
-                    "AND (status_categoria = 'A')";
+                string sql = "SELECT id_cliente AS CÓDIGO, nome_cliente AS NOME, " +
+                    "cpf_cliente AS CPF,celular_cliente AS CELULAR, " +
+                    "email_cliente AS 'E-MAIL' " +
+                    "FROM tblclientes WHERE (nome_cliente LIKE @filtro " +
+                    "OR cpf_cliente LIKE @filtro OR email_cliente LIKE @filtro) AND (status_cliente = 'I')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
-                        //Se o usuário pesquisar por ca (Canecas,
-                        //Canetas,Bonecas).
+                        //Se o usuário pesquisar por Ma (Mateus,
+                        //Marcos,Marina).
                         cmd.Parameters.AddWithValue("@filtro",
-                            "%" + txtBuscarCategorias.Text +
+                            "%" + txtBuscarClientesInativos.Text +
                             "%");
 
                         //Preencher o dataTable
@@ -91,7 +81,7 @@ namespace GerenciaAPP
                         DataTable dt = new DataTable();
                         da.Fill(dt);
 
-                        dgvCategorias.DataSource = dt;
+                        dgvClientesInativos.DataSource = dt;
                     }
                 }
             }
@@ -101,58 +91,54 @@ namespace GerenciaAPP
             }
         }
 
-        private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void frmConsultarClientesInativos_Load(object sender, EventArgs e)
+        {
+            ConsultarClientesInativos();
+        }
+
+        private void restaurarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                //Se o campo selecionador for diferente de null
-                //então a deleção pode acontecer
-                if (dgvCategorias.CurrentRow != null)
+                if (dgvClientesInativos.CurrentRow != null)
                 {
-                    int idProduto = Convert.ToInt32(dgvCategorias.CurrentRow.Cells["CÓDIGO"].Value);
+                    int idCategoria = Convert.ToInt32(dgvClientesInativos.CurrentRow.Cells["CÓDIGO"].Value);
 
-                    DialogResult result = MessageBox.Show(
-                        $"Tem certeza que deseja deletar esta categoria: " +
-                        $"{dgvCategorias.CurrentRow.Cells["NOME"].Value} ? ",
-                        "Confirmação de Deleção:",
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja " +
+                        $"restaurar a categoria: " +
+                        $"{dgvClientesInativos.CurrentRow.Cells["NOME"].Value}",
+                        "Confirmação de Restauração",
                         MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning
-
-                        );
+                        MessageBoxIcon.Warning);
 
                     if (result == DialogResult.Yes)
                     {
                         Conexao conexao = new Conexao();
 
-                        string sql = "UPDATE tblcategorias " +
-                            "SET status_categoria = 'I' " +
-                            "WHERE id_categoria = @id";
+                        string sql = "UPDATE tblclientes " +
+                            "SET status_cliente = 'A' " +
+                            "WHERE id_cliente = @id";
 
                         using (SqlConnection con = conexao.Conectar())
                         {
                             using (SqlCommand cmd = new SqlCommand(sql, con))
                             {
-                                cmd.Parameters.AddWithValue("@id", idProduto);
+                                cmd.Parameters.AddWithValue("@id", idCategoria);
                                 cmd.ExecuteNonQuery();
-                                CarregarCategorias();
+                                ConsultarClientesInativos();
                             }
                         }
-                        MessageBox.Show("Categoria excluída com sucesso!","Sucesso!",MessageBoxButtons.OK,MessageBoxIcon.Information);
-
+                        MessageBox.Show("Categoria restaurada com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-
                 }
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao deletar: " + ex.Message);
+                MessageBox.Show("Erro ao restaurar a categoria: " + ex.Message);
             }
         }
-
-        private void ctxMenuCategorias_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
     }
+
 }
+

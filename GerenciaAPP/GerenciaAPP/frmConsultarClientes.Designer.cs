@@ -88,6 +88,7 @@
             ctxConsultarClientes.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
             ctxConsultarClientes.Name = "ctxConsultarClientes";
             ctxConsultarClientes.Size = new Size(181, 70);
+            ctxConsultarClientes.Opening += ctxConsultarClientes_Opening;
             // 
             // alterarToolStripMenuItem
             // 

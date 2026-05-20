@@ -11,36 +11,33 @@ using Microsoft.Data.SqlClient;
 
 namespace GerenciaAPP
 {
-    public partial class frmConsultarFornecedores : Form
+    public partial class frmConsultarFornecedoresInativos : Form
     {
-        public frmConsultarFornecedores()
+        public frmConsultarFornecedoresInativos()
         {
             InitializeComponent();
         }
 
-        public DataTable ConsultarFornecedores()
+        public DataTable CarregarFornecedoresInativos()
         {
             try
             {
-                //Instanciando a conexão
                 Conexao conexao = new Conexao();
 
-                //Query (Consulta) 
-                string sql = "SELECT id_fornecedor AS CÓDIGO," +
-                    "cnpj_fornecedor AS CNPJ, razao_social_fornecedor AS 'RAZÃO SOCIAL' FROM tblfornecedores WHERE status_fornecedor = 'A' ";
-
+                string sql = "SELECT id_fornecedor AS CÓDIGO,cnpj_fornecedor " +
+                    "AS CNPJ,razao_social_fornecedor AS 'RAZÃO SOCIAL' " +
+                    "FROM tblfornecedores WHERE status_fornecedor = 'I'";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
 
-                        //Preencher o dataTable
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
 
-                        dgvFornecedores.DataSource = dt;
+                        dgvFornecedoresInativos.DataSource = dt;
 
                         return dt;
                     }
@@ -57,34 +54,31 @@ namespace GerenciaAPP
         {
             try
             {
-                //Instanciando a conexão
                 Conexao conexao = new Conexao();
 
-                //Query (Consulta) 
-                string sql = "SELECT id_fornecedor AS CÓDIGO," +
-                    "cnpj_fornecedor AS CNPJ, razao_social_fornecedor AS 'RAZÃO SOCIAL' FROM tblfornecedores " +
+                string sql = "SELECT id_fornecedor AS CÓDIGO, " +
+                    "cnpj_fornecedor AS CNPJ, " +
+                    "razao_social_fornecedor AS 'RAZÃO SOCIAL' " +
+                    "FROM tblfornecedores " +
                     "WHERE (cnpj_fornecedor LIKE @filtro " +
                     "OR razao_social_fornecedor LIKE @filtro " +
                     "OR nome_fantasia_fornecedor LIKE @filtro " +
                     "OR telefone_fornecedor LIKE @filtro " +
-                    "OR celular_fornecedor LIKE @filtro) AND (status_fornecedor = 'A')";
+                    "OR celular_fornecedor LIKE @filtro)" +
+                    "AND (status_fornecedor = 'I')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
-                        //Se o usuário pesquisar por Ma (Mateus,
-                        //Marcos,Marina).
                         cmd.Parameters.AddWithValue("@filtro",
-                            "%" + txtBuscarFornecedores.Text +
-                            "%");
+                            "%" + txtBuscarFornecedoresInativos.Text + "%");
 
-                        //Preencher o dataTable
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
 
-                        dgvFornecedores.DataSource = dt;
+                        dgvFornecedoresInativos.DataSource = dt;
                     }
                 }
             }
@@ -94,20 +88,24 @@ namespace GerenciaAPP
             }
         }
 
-        private void frmConsultarFornecedores_Load(object sender, EventArgs e)
+        private void frmConsultarFornecedoresInativos_Load(object sender, EventArgs e)
         {
-            ConsultarFornecedores();
+            CarregarFornecedoresInativos();
         }
 
-        private void deletarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void restaurarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dgvFornecedores.CurrentRow != null)
+                if (dgvFornecedoresInativos.CurrentRow != null)
                 {
-                    int idFornecedor = Convert.ToInt32(dgvFornecedores.CurrentRow.Cells["CÓDIGO"].Value);
-                    DialogResult result = MessageBox.Show($"Tem certeza que deseja deletar: " +
-                        $"{dgvFornecedores.CurrentRow.Cells["RAZÃO SOCIAL"].Value}.", "Confirmação",
+                    int idFornecedor = Convert.ToInt32(dgvFornecedoresInativos
+                        .CurrentRow.Cells["CÓDIGO"].Value);
+
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja " +
+                        $"reativar o fornecedor: " +
+                        $"{dgvFornecedoresInativos.CurrentRow.Cells["RAZÃO SOCIAL"].Value}",
+                        "Confirmação de Restauração",
                         MessageBoxButtons.YesNo,
                         MessageBoxIcon.Warning);
 
@@ -115,31 +113,35 @@ namespace GerenciaAPP
                     {
                         Conexao conexao = new Conexao();
 
-                        string sql = "UPDATE tblFornecedores " +
-                            "SET status_fornecedor = 'I' " +
-                            "WHERE id_fornecedor = @id";
+                        string sql = "UPDATE tblfornecedores SET status_fornecedor = 'A' WHERE id_fornecedor = @id";
 
-                        using (SqlConnection con = conexao.Conectar()) {
+                        using (SqlConnection con = conexao.Conectar())
+                        {
                             using (SqlCommand cmd = new SqlCommand(sql, con))
                             {
-                                cmd.Parameters.AddWithValue("@id",idFornecedor);
+                                cmd.Parameters.AddWithValue("@id", idFornecedor);
                                 cmd.ExecuteNonQuery();
-                                ConsultarFornecedores();
+                                CarregarFornecedoresInativos();
                             }
-                            MessageBox.Show("Fornecedor removido com sucesso!",
-                                "Sucesso",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                        } 
+                        }
+
+                        MessageBox.Show("Fornecedor restaurado com sucesso!");
+
                     }
+
                 }
             }
-
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao deletar: " + ex.Message);
+                MessageBox.Show("Erro ao restaurar " +
+                    "a fornecedor: " + ex.Message);
             }
+
+        }
+
+        private void ctxConsultarFornecedoresInativos_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }
-

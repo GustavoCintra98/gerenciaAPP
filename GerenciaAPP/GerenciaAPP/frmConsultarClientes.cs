@@ -48,7 +48,6 @@ namespace GerenciaAPP
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
-
                 return null;
             }
         }
@@ -75,7 +74,7 @@ namespace GerenciaAPP
                     "cpf_cliente AS CPF,celular_cliente AS CELULAR, " +
                     "email_cliente AS 'E-MAIL' " +
                     "FROM tblclientes WHERE (nome_cliente LIKE @filtro " +
-                    "OR cpf_cliente LIKE @filtro OR email_cliente LIKE @filtro) AND (status_cliente = 'A') ";
+                    "OR cpf_cliente LIKE @filtro OR email_cliente LIKE @filtro) AND (status_cliente = 'A')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
@@ -113,31 +112,37 @@ namespace GerenciaAPP
             {
                 if (dgvClientes.CurrentRow != null)
                 {
+
                     int idCliente = Convert.ToInt32(dgvClientes.CurrentRow.Cells["CÓDIGO"].Value);
 
-                    DialogResult result = MessageBox.Show($"Tem certeza que deseja inativa o cliente: " +
-                        $"{dgvClientes.CurrentRow.Cells["NOME"].Value}","Confirmação",
+                    DialogResult result = MessageBox.Show($"Tem certeza que deseja deletar o cliente: " +
+                        $"{dgvClientes.CurrentRow.Cells["NOME"].Value}", "Confirmação",
                         MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning);
+                        MessageBoxIcon.Warning
+                        );
 
                     if (result == DialogResult.Yes)
                     {
                         Conexao conexao = new Conexao();
 
-                        string sql = "UPDATE tblclientes SET status_cliente = 'I' WHERE id_cliente = @id";
+                        string sql = "UPDATE tblclientes " +
+                            "SET status_cliente = 'I'" +
+                            "WHERE id_cliente = @id";
 
                         using (SqlConnection con = conexao.Conectar())
                         {
                             using (SqlCommand cmd = new SqlCommand(sql, con))
                             {
+
                                 cmd.Parameters.AddWithValue("@id", idCliente);
                                 cmd.ExecuteNonQuery();
-
                                 ConsultarClientes();
+
                             }
                         }
-                        MessageBox.Show("Cliente removido com sucesso!", 
-                            "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cliente removido com sucesso!",
+                            "Sucesso!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                     }
 
 
@@ -146,8 +151,13 @@ namespace GerenciaAPP
 
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao remover o cliente: " + ex.Message);
+                MessageBox.Show("Erro ao deletar: " + ex.Message);
             }
+        }
+
+        private void ctxConsultarClientes_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

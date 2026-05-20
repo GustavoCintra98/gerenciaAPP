@@ -83,13 +83,13 @@
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(546, 427);
             dgvCategorias.TabIndex = 1;
-            dgvCategorias.CellContentClick += dgvCategorias_CellContentClick;
             // 
             // ctxMenuCategorias
             // 
             ctxMenuCategorias.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
             ctxMenuCategorias.Name = "ctxMenuCategorias";
             ctxMenuCategorias.Size = new Size(181, 70);
+            ctxMenuCategorias.Opening += ctxMenuCategorias_Opening;
             // 
             // alterarToolStripMenuItem
             // 

@@ -22,13 +22,22 @@
     <Compile Update="frmConsultarCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmConsultarCategoriasInativas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmConsultarClienteInativo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmConsultarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmConsultarClientesInativos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmConsultarFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultarFornecedoresInativos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmConsultarFornecedorInativo.cs">
@@ -38,6 +47,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmConsultarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmConsultarProdutosInativos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmPainelVendas.cs">

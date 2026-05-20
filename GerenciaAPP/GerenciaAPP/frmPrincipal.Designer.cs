@@ -59,7 +59,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastrosToolStripMenuItem, consultasToolStripMenuItem, consultasInativasToolStripMenuItem, fiscalToolStripMenuItem, relatóriosToolStripMenuItem, configuraçõesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(919, 24);
+            menuStrip1.Size = new Size(932, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -206,9 +206,9 @@
             // 
             // statusStrip1
             // 
-            statusStrip1.Location = new Point(0, 504);
+            statusStrip1.Location = new Point(0, 525);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(919, 22);
+            statusStrip1.Size = new Size(932, 22);
             statusStrip1.TabIndex = 1;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -220,12 +220,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(919, 526);
+            ClientSize = new Size(932, 547);
             Controls.Add(statusStrip1);
             Controls.Add(menuStrip1);
             Name = "frmPrincipal";
             Text = "GerenciaAPP - Principal";
-            Load += frmPrincipal_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

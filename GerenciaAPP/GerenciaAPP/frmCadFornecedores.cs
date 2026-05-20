@@ -53,6 +53,7 @@ namespace GerenciaAPP
                         cmd.Parameters.AddWithValue("@responsavel", txtResponsavel.Text);
                         cmd.Parameters.AddWithValue("@observacoes", txtObservacoes.Text);
                         cmd.Parameters.AddWithValue("@status_fornecedor", "A");
+                        
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Fornecedor cadastrado com sucesso!",
                             "Sucesso", MessageBoxButtons.OK, 
@@ -76,7 +77,7 @@ namespace GerenciaAPP
                         mskCelular.Clear();
                         txtEmail.Clear();
                         txtResponsavel.Clear();
-                        txtObservacoes.Clear();
+                        txtObservacoes.Clear(); 
 
                     }
                 }

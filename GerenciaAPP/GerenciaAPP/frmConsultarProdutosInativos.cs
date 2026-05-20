@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,45 +12,41 @@ using Microsoft.Data.SqlClient;
 
 namespace GerenciaAPP
 {
-    public partial class frmConsultarProdutos : Form
+    public partial class frmConsultarProdutosInativos : Form
     {
-        public frmConsultarProdutos()
+        public frmConsultarProdutosInativos()
         {
             InitializeComponent();
         }
 
-        public DataTable CarregarProdutos()
+        public DataTable CarregarProdutosInativos()
         {
             try
             {
-                //Instanciando a conexão
                 Conexao conexao = new Conexao();
 
-                //Query (Consulta) 
-                string sql = "SELECT id_produto AS CÓDIGO," +
-                    "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' FROM tblprodutos " +
-                    "WHERE status_produto = 'A'";
+                string sql = "SELECT id_produto AS CÓDIGO, " +
+                    "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' " +
+                    "FROM tblprodutos WHERE status_produto = 'I'";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
 
-                        //Preencher o dataTable
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
 
                         dgvProdutos.DataSource = dt;
-
                         return dt;
                     }
                 }
             }
+
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao efetuar a busca: " + ex.Message);
-
+                MessageBox.Show("Erro ao carregar dados: " + ex.Message);
                 return null;
             }
         }
@@ -58,28 +55,23 @@ namespace GerenciaAPP
         {
             try
             {
-                //Instanciando a conexão
                 Conexao conexao = new Conexao();
 
-                //Query (Consulta) 
-                string sql = "SELECT id_produto AS CÓDIGO, " +
-                    "sku_produto AS SKU, descricao_produto AS 'NOME PRODUTO' FROM tblprodutos " +
-                    "WHERE (sku_produto LIKE @filtro " +
+                string sql = "SELECT id_produto AS CÓDIGO," +
+                    "sku_produto AS SKU, " +
+                    "descricao_produto AS 'NOME PRODUTO' " +
+                    "FROM tblprodutos WHERE (sku_produto LIKE @filtro " +
                     "OR ean_produto LIKE @filtro " +
                     "OR descricao_produto LIKE @filtro) " +
-                    "AND (status_produto = 'A')";
+                    "AND (status_produto = 'I')";
 
                 using (SqlConnection con = conexao.Conectar())
                 {
                     using (SqlCommand cmd = new SqlCommand(sql, con))
                     {
-                        //Se o usuário pesquisar por Ma (Mateus,
-                        //Marcos,Marina).
                         cmd.Parameters.AddWithValue("@filtro",
-                            "%" + txtBuscarProdutos.Text +
-                            "%");
+                            "%" + txtBuscarProdutos.Text + "%");
 
-                        //Preencher o dataTable
                         SqlDataAdapter da = new SqlDataAdapter(cmd);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
@@ -94,68 +86,54 @@ namespace GerenciaAPP
             }
         }
 
-        private void frmConsultarProdutos_Load(object sender, EventArgs e)
+        private void frmConsultarProdutosInativos_Load(object sender, EventArgs e)
         {
-            CarregarProdutos();
+            CarregarProdutosInativos();
         }
 
-        private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void deletarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void restaurarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                //Se o campo selecionador for diferente de null
-                //então a deleção pode acontecer
+
                 if (dgvProdutos.CurrentRow != null)
                 {
                     int idProduto = Convert.ToInt32(dgvProdutos.CurrentRow.Cells["CÓDIGO"].Value);
 
-                    DialogResult result = MessageBox.Show(
-                        $"Tem certeza que deseja deletar este produto: " +
-                        $"{dgvProdutos.CurrentRow.Cells["NOME PRODUTO"].Value} ? ",
-                        "Confirmação de Deleção:",
+                    DialogResult result = MessageBox.Show($"Deseja " +
+                        $"restaurar o produto: " +
+                        $"{dgvProdutos.CurrentRow.Cells["NOME PRODUTO"].Value} ?",
+                        "Confirmação de Restauração",
                         MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Warning
+                        MessageBoxIcon.Warning);
 
-                        );
-                    
                     if (result == DialogResult.Yes)
+
                     {
                         Conexao conexao = new Conexao();
 
-                        string sql = "UPDATE tblprodutos SET " +
-                            "status_produto = 'I' " +
-                            "WHERE id_produto = @id";
+                        string sql = "UPDATE tblprodutos " +
+                            "SET status_produto = 'A' WHERE id_produto = @id";
 
                         using (SqlConnection con = conexao.Conectar())
                         {
-                            using (SqlCommand cmd = new SqlCommand (sql, con))
+                            using (SqlCommand cmd = new SqlCommand(sql, con))
                             {
-                                cmd.Parameters.AddWithValue("@id",idProduto);
+                                cmd.Parameters.AddWithValue("@id", idProduto);
                                 cmd.ExecuteNonQuery();
-                                CarregarProdutos();
+                                CarregarProdutosInativos();
+                                MessageBox.Show("Produto reativado com sucesso!");
                             }
                         }
-                        MessageBox.Show("Produto excluído com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     }
-
                 }
             }
-
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao deletar: " + ex.Message);
+                MessageBox.Show("Erro ao restaurar o produto: " + ex.Message);
+            }
+        
             }
         }
-
-        private void ctxMenuProdutos_Opening(object sender, CancelEventArgs e)
-        {
-            
-        }
     }
-}
+

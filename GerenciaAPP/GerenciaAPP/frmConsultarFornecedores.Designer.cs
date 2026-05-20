@@ -82,14 +82,12 @@
             dgvFornecedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFornecedores.Size = new Size(776, 515);
             dgvFornecedores.TabIndex = 1;
-            dgvFornecedores.CellContentClick += dgvFornecedores_CellContentClick;
             // 
             // ctxConsultarFornecedor
             // 
             ctxConsultarFornecedor.Items.AddRange(new ToolStripItem[] { alterarToolStripMenuItem, deletarToolStripMenuItem });
             ctxConsultarFornecedor.Name = "ctxConsultarFornecedor";
             ctxConsultarFornecedor.Size = new Size(112, 48);
-            ctxConsultarFornecedor.Opening += contextMenuStrip1_Opening;
             // 
             // alterarToolStripMenuItem
             // 
