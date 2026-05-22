@@ -23,7 +23,8 @@ namespace GerenciaAPP
             dgvItensVenda.Columns.Add("colNumero", "ITEM");
             dgvItensVenda.Columns.Add("colDescricao", "PRODUTO");
             dgvItensVenda.Columns.Add("colqtde", "QUANTIDADE");
-            dgvItensVenda.Columns.Add("colValor", "VALOR R$");
+            dgvItensVenda.Columns.Add("colValorUni", "VALOR UN. R$");
+            dgvItensVenda.Columns.Add("colTotal", "VALOR TOTAL R$");
         }
 
         private void BuscarProduto(string codigo)
@@ -93,9 +94,13 @@ namespace GerenciaAPP
 
             int qtde = 1;
 
+            decimal valorTotalItens = valor * qtde;
+
             // Adicionar linha no DataGridView (seguindo a ordem das colunas)
 
-            dgvItensVenda.Rows.Add(numItem, nome, qtde, valor.ToString("F2"));
+            dgvItensVenda.Rows.Add(numItem, nome, qtde, valor.ToString("F2"), valorTotalItens.ToString("F2"));
+
+            AtualizarToatisVenda();
         }
 
 
